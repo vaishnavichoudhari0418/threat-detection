@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load model and encoders
 model = tf.keras.models.load_model("cnn_lstm_model.h5")
-label_encoders = joblib.load("label_encoders.pkl")
+label_encoders = joblib.load("label_encoder.pkl")
 
 features = ['srv_count', 'service', 'src_bytes', 'count', 'protocol_type',
             'dst_host_same_src_port_rate', 'dst_host_diff_srv_rate', 'diff_srv_rate',
